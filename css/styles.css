@@ -18,7 +18,7 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -64,10 +64,6 @@ body {
 }
 .site-nav .link {
   color: var(--primary-text-color);
-
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 .site-nav .link.current {
   color: var(--accent-colour);
@@ -193,6 +189,9 @@ body {
 .work-list .work-item:last-child {
   margin-right: 0;
 }
+.img {
+  display: block;
+}
 
 /* Наша команда */
 .team {
@@ -218,6 +217,8 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .team-name {
   font-weight: 500;
@@ -255,16 +256,13 @@ body {
   display: inline-block;
   margin-bottom: 20px;
 }
-.address-sity {
+.address-city {
   color: var(--white-color);
 
   font-style: normal;
   font-weight: 400;
   line-height: 1.71;
   text-decoration: none;
-
-  display: inline-block;
-  margin-bottom: 9px;
 }
 .address-mail,
 .address-phone {
@@ -274,18 +272,17 @@ body {
   font-weight: 400;
   line-height: 1.71;
   text-decoration: none;
-
-  display: inline-block;
-  margin-bottom: 9px;
 }
 .address .link:hover,
 .address .link:focus {
   color: var(--accent-colour);
 }
-
-.address-sity,
-.address-mail {
+.address-item.city,
+.address-item.mail {
   margin-bottom: 9px;
+}
+.address-item.phone {
+  margin: 0;
 }
 
 /* Portfolio */
@@ -325,10 +322,10 @@ body {
 .project-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 .project-item {
   width: calc((100% - 60px) / 3);
-  margin-right: 30px;
   margin-bottom: 30px;
   border: 1px solid #eeeeee;
 }
